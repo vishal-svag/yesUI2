@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="12dp"
+    android:paddingHorizontal="16dp"
+    android:background="@color/white">
+
+    <!-- Item Number TextView -->
+    <TextView
+        android:id="@+id/tv_item_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Start Time Spinner -->
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner_start_time"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:background="@drawable/spinner_bg"
+        app:layout_constraintStart_toEndOf="@id/tv_item_number"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.35"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Minus Icon -->
+    <ImageView
+        android:id="@+id/iv_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="minus_icon"
+        android:background="@color/white"
+        android:src="@drawable/minus"
+        app:layout_constraintStart_toEndOf="@id/spinner_start_time"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="10dp" />
+
+    <!-- End Time Spinner -->
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner_end_time"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:background="@drawable/spinner_bg"
+        app:layout_constraintStart_toEndOf="@id/iv_minus"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.35"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Delete Icon -->
+    <ImageButton
+        android:id="@+id/iv_delete"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_delete"
+        android:backgroundTint="@color/white"
+        android:contentDescription="delete_icon"
+        app:layout_constraintStart_toEndOf="@id/spinner_end_time"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Plus Icon (Visible only for the last item) -->
+    <ImageButton
+        android:id="@+id/iv_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_add"
+        android:contentDescription="add_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone" /> <!-- Default visibility: GONE -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

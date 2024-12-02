@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/booking"
+        android:title="Bookings" />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/enquery"
+        android:title="Enquiries" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/available"
+        android:title="Availability" />
+
+    <item
+        android:id="@+id/navigation_service"
+        android:icon="@drawable/services"
+        android:title="Services" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/profile"
+        android:title="Profile" />
+
+
+</menu>
